@@ -4,9 +4,9 @@
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
+  --color-win: #351f39;
   --color-lose: #D94545;
-  --color-start: #5b85b7;
+  --color-start: #726a95;
   --color-neutral: #445069;
   --color-neutral-light: #D2D2D2;
   --color-keys: #37474F;
@@ -43,7 +43,7 @@ h2 {
 }
 
 button {
-  margin: 6px;
+  margin: 8px;
   border: 1px solid transparent;
   padding: .5rem 1rem;
   color: var(--color-keys);
@@ -73,12 +73,17 @@ button {
 
 .header {
   color: var(--color-start);
+  text-align: center;
 }
 
 /* Scoreboard */
+#scoreboard {
+text-align: center;
 
+}
 .tries {
   background-image: url('/liveHeart.png');
+
 }
 
 /* Phrase */
@@ -120,7 +125,7 @@ button {
 .btn__reset {
   padding: 8px;
   margin: 50px auto;
-  background: #FFFFFF;
+  background: #f4e8c1;
   border-radius: 5px;
   font-size: var(--font-size-medium);
 }
