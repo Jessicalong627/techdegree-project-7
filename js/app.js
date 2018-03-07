@@ -44,7 +44,7 @@ addPhraseToDisplay( splitPhrase );
 
 let liLetter = document.querySelectorAll('.letter');
 
-
+//check letter function
 function checkLetter( btn ) {
 	let matchLetter = null;
 
@@ -59,15 +59,16 @@ function checkLetter( btn ) {
 	return matchLetter;
 }
 
+let scoreboard = document.getElementById('scoreboard').querySelectorAll('ol li');
 
-
+// listen for button clicks
 qwerty.addEventListener('click', ( e ) => {
 	if ( e.target.tagName == 'BUTTON' ) {
 		e.target.disabled = 'true';
 		e.target.className += 'chosen';
 
 		const letterFound = checkLetter( e.target );
-    let scoreboard = document.getElementById('scoreboard').querySelectorAll('ol li');
+
 		if ( letterFound == null ) {
 			missed++;
 			scoreboard[ scoreboard.length - missed ].firstElementChild.src = 'images/lostHeart.png';
@@ -77,6 +78,7 @@ qwerty.addEventListener('click', ( e ) => {
 	checkWin();
 })
 
+//check for win/loss
 function checkWin() {
 	const liShow = document.querySelectorAll('.show');
 
